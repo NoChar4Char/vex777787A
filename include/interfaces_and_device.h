@@ -1,5 +1,4 @@
 #ifdef interface_h
-
 #define interface_h
 
 #include <math.h>
@@ -24,5 +23,7 @@ motor RB = motor(PORT14, ratio6_1, 0);
 motor RC = motor(PORT11, ratio6_1, 1);
 
 MOTOR ITK = motor(PORT16, ratio18_1, 1);
+MOTOR ELVR = motor(PORT9, ratio6_1, 1);
+MOTOR ELVL = motor(PORT8, ratio6_1, 1);
 
 #endif

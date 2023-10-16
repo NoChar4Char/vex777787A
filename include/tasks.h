@@ -7,4 +7,8 @@ void intake(float v) {
     ITK.spin(fwd, 120*v,voltageUnits::MV);
 }
 
+void elev() {
+    
+}
+
 #endif

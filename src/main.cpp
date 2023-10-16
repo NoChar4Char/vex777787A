@@ -18,16 +18,18 @@ void userctrl(void) {
     float rota = 0.8; // change from tesing
     while (1) {
 
-        LA.spin(fwd, 120*(Ch3+Ch1*rota), voltageUnits::MV);
-        LB.spin(fwd, 120*(Ch3+Ch1*rota), voltageUnits::MV);
-        LC.spin(fwd, 120*(Ch3+Ch1*rota), voltageUnits::MV);
+        LA.spin(fwd, 120*((Ch3+Ch1)*rota), voltageUnits::MV);
+        LB.spin(fwd, 120*((Ch3+Ch1)*rota), voltageUnits::MV);
+        LC.spin(fwd, 120*((Ch3+Ch1)*rota), voltageUnits::MV);
 
-        RA.spin(fwd, 120*(-Ch3+Ch1*rota), voltageUnits::MV);
-        RB.spin(fwd, 120*(-Ch3+Ch1*rota), voltageUnits::MV);
-        RC.spin(fwd, 120*(-Ch3+Ch1*rota), voltageUnits::MV);
+        RA.spin(fwd, 120*((-Ch3+Ch1)*rota), voltageUnits::MV);
+        RB.spin(fwd, 120*((-Ch3+Ch1)*rota), voltageUnits::MV);
+        RC.spin(fwd, 120*((-Ch3+Ch1)*rota), voltageUnits::MV);
 
         intake(100*(R1-R2));
-
+        ELEV1.spin(fwd, 120*((L1-L2)*rota), voltageUnits::MV);
+        ELEV2.spin(fwd, 120*((L1-L2)*rota), voltageUnits::MV);
+        
         wait(10,msec); // refresh every 10 ms so quickest
     }
 }
